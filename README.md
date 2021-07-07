@@ -1,5 +1,8 @@
 ## Install
+    - git clone https://github.com/muribudimankerja/alumagubi
+    - cd alumagubi
     - composer install
+    - linux cp .env.example .env
     - php artisan key:generate
     - The key will be written automatically in your .env file.
 ## Database
