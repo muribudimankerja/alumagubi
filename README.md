@@ -30,6 +30,8 @@
 | :--- | :--- | :--- |
 | `search` | `string` | Search product title or category name |
 | `category_id` | `integer` | filter products by category id |
+| `page` | `integer` | page number |
+| `limit` | `integer` | page line limit  |
 ### Responses
 ```javascript
 {
