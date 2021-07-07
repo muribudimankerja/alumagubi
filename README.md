@@ -23,3 +23,38 @@
 ## Dev
     - php artisan serve
 ## API
+```http
+    GET http://127.0.0.1:8000/api/v1/products
+```
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `search` | `string` | Search product title or category name |
+| `category_id` | `integer` | filter products by category id |
+### Responses
+```javascript
+{
+   "success":true,
+   "message":"",
+   "data":[
+      {
+         "id":117781,
+         "category_id":89,
+         "title":"VIP80 Soldering BGA Net",
+         "price":"2.70",
+         "category":{
+            "category_id":89,
+            "name":"Repair Tools"
+         }
+      }
+   ],
+   "paginate":{
+      "total":1,
+      "currentPage":1,
+      "lastPage":1,
+      "hasMorePages":false,
+      "perPage":25,
+      "lastItem":1
+   }
+}
+```
+

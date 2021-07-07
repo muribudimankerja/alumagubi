@@ -59,4 +59,19 @@ class Product extends Model
 
         return $query->paginate($limit);
     }
+    
+    public static function pagination($mdl)
+    {
+        $paginate = [
+            'total' => (int) $mdl->total(),
+            'currentPage' => (int) $mdl->currentPage(),
+            'lastPage' => (int) $mdl->lastPage(),
+            'hasMorePages' => (boolean) $mdl->hasMorePages(),
+            'perPage' => (int) $mdl->perPage(),
+            'total' => (int) $mdl->total(),
+            'lastItem' => (int) $mdl->lastItem(),
+        ];
+
+        return $paginate;
+    }
 }
